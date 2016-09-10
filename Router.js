@@ -1,5 +1,10 @@
-function route(pathname)
+function route(handle,pathname)
 {
-	console.log("routing a request for "+pathname);
+	if(typeof handle[pathname]==='function'){
+		handle[pathname]();
+	}
+	else
+		{console.log("page does not exist");}
+	;
 }
 exports.route = route;

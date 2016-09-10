@@ -1,2 +1,3 @@
 var server = require('./Server');
-server.StartServer();
+var router =require('./router');
+server.StartServer(router.route);
